@@ -1,0 +1,29 @@
+<div class="grid">
+  <div 
+  class="grid-row"
+  *ngFor="let day of collection">
+    <div class="grid-cell">
+      {{day.day}}
+    </div>
+    <div class="grid-cell grid-cell-block">
+      <div *ngFor="let user of users; let index = index;trackBy:trackByIndex;">
+        <input [(ngModel)]="users[index]" />
+      </div>
+    </div>
+    <div class="grid-cell grid-cell-block">
+      <div *ngFor="let meal of day.plan">
+        {{meal.sniadanie}}
+      </div>
+    </div>
+    <div class="grid-cell grid-cell-block">
+      <div *ngFor="let meal of day.plan">
+        {{meal.obiad}}
+      </div>
+    </div>
+    <div class="grid-cell grid-cell-block">
+      <div *ngFor="let meal of day.plan">
+        {{meal.kolacja}}
+      </div>
+    </div>
+  </div>
+</div>

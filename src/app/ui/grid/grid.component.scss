@@ -1,0 +1,11 @@
+.grid{
+    .grid-row{
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+        .grid-cell{
+            &.grid-cell-block{
+                display:grid;
+            }
+        }
+    }
+}
